@@ -1,0 +1,12 @@
+
+services:
+  nestjs-playground:
+    image: nestjs-playground-devenvironment
+    container_name: nestjs-playground-devcontainer
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/workspace
+    tty: true
+    command: "/usr/bin/fish" 
